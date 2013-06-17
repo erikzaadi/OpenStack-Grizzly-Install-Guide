@@ -19,7 +19,7 @@ if [[ ! $? -eq 0 ]]; then
     echo "mysql client not installed!"
     exit 1
 fi
-MYSQL_COMMAND="mysql -uroot -p${MYSQL_PASS} > /dev/null 2>&1"
+MYSQL_COMMAND="mysql -uroot -p${MYSQL_PASS}"
 echo "Checking mysql connection.."
 TEST=$(echo "show databases;" | ${MYSQL_COMMAND})
 if [[ ! $? -eq 0 ]]; then
